@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Camgirl Graphics</title>
+<style>
+html {scroll-behavior: smooth;}
+.xcr::-webkit-scrollbar {width:8px;}
+.xcr::-webkit-scrollbar-track {-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);-webkit-border-radius:10px;border-radius:10px;}
+.xcr::-webkit-scrollbar-thumb {-webkit-border-radius:10px;border-radius:10px;background:#dfbd74;-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);}
+.xcr::-webkit-scrollbar-thumb:window-inactive {background:rgba(204,0,0,.4);border:1px solid #033;}
+* {box-sizing:border-box;}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-5-half {width: 47.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+    border: 0px solid #ccc;
+}
+[class*="no"] {
+    float: left;
+    padding: 0;}
+[class*="padd20"]{display:block;padding:20px;}
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+.hr{border:none; clear:both; height:1px; line-height:0; width:100%; font-size:0; padding:0 ;margin-bottom :20px;background:#F39;box-shadow:0 0px 3px #fff;}
+.tleft {text-align:left;}
+.tright {text-align:right;}
+.tcenter {text-align:center;}
+.tfleft {float:left;}
+.fright {float:right;}
+.clear {clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
+.dotted {border-bottom:1px dashed #FC3;border-left:0;border-right:0;margin-bottom:10px;}
+img.imgresponsive,.imgresponsive img{display:block;width:100%;height:auto;margin:0 auto;}
+
+a, a:visited{color:#09C;text-decoration:none;}
+a:hover{color:#F39;text-decoration:none;}
+
+
+
+body{margin:0 auto;width:90%;font-family:sans-serif;background-color:#f1f1f1;}
+.container{-webkit-box-shadow:0 0 4px #999;box-shadow:0 0 4px #999;}
+.header{padding:30px 0 33px;margin:0 auto;background: #ff0084;
+background: -moz-linear-gradient(-45deg,  #ff0084 0%, #006ac6 100%);
+background: -webkit-linear-gradient(-45deg,  #ff0084 0%,#006ac6 100%);
+background: linear-gradient(135deg,  #ff0084 0%,#006ac6 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff0084', endColorstr='#006ac6',GradientType=1 );
+}
+.header h1{display:block;width:90%;height:auto;margin:0 auto;text-align:left;font-size:3rem;color:rgba(255,255,255,.80);line-height:110px;font-family:sans-serif;}
+.main{background-color:#fff;}
+h2, p, section p{color:#777;}
+h2{font-size:25px;font-weight:lighter;}
+p, section p{color:#777;font-size:17px;}
+
+
+.buttondownload a, .buttondownload a:visited{display:block;width:90%;height:auto;background-color:#06C;color:#f1f1f1;text-decoration:none;padding:9px 0 9px;text-align:center;border-radius:30px;}
+.buttondownload a:hover{background-color:#069;color:#fff;text-decoration:none;}
+
+
+img.blacked{background-color:#f1f1f4;margin-top:10px; margin-bottom:10px;}
+img.blacked:hover{background-color:#333;margin-top:10px; margin-bottom:10px;}
+
+.footer{background-color:#222;color:#777;-webkit-box-shadow:0 0 4px #999;box-shadow:0 0 4px #999;}
+.footer a, .footer a:visited{font-size:15px;color:#666;text-decoration:none;}
+.footer a:hover{color:#F60;text-decoration:none;}
+.credits{font-size:14px;}
+.pagination{background-color:#f1f1f1;-webkit-box-shadow:0 0 4px #999;box-shadow:0 0 4px #999;}
+.pagination a,.pagination a:visited{display:inline-block;width:30px;text-align:center;height:auto;font-size:15px;text-align:center;color:#f1f1f1;text-decoration:none;background-color:#06C;padding:5px 0 5px;border-radius:5px;}
+.pagination a:hover{display:inline-block;width:30px;height:auto;font-size:15px;color:#fff;text-decoration:none;background-color:#069;padding:5px 0 5px;border-radius:5px;}
+.pagination a.active{background-color:#ccc;color:#777;cursor:not-allowed;}
+
+
+
+
+
+
+
+.navigation{display:block;width:30px;height:auto;position:fixed;top:5px;right:10px;overflow:hidden;}
+
+.navigation a,.navigation a:visited{display:block;width:100%;height:auto;background-color:#09C;color:#fff;text-decoration:none;text-align:center;font-size:22px;padding-top:3px;}
+.navigation a:hover{background-color:#939;color:#fff;text-decoration:none;}
+
+.nav #menu{display:block;width:300px;height:100%;position:fixed;top:0;left:-330px;background-color:rgba(0,0,0,.90);padding:15px;z-index:999;-webkit-transition:ease-in-out .5s;transition:ease-in-out .5s;}
+.nav #menu:target{display:block;width:300px;height:100%;position:fixed;top:0;left:0;}
+
+.amenu a, .amenu a:visited{display:block;width:90%;height:auto;padding:10px;text-align:left;color:#FC6;text-decoration:none;}
+.amenu a:hover{color:#0CC;text-decoration:none;}
+
+#menu h2{color:#f1f1f1;}
+
+.cgcclose{display:block;width:30px;height:30px;position:relative;top:-12px;left:235px;}
+.cgcclose a,.cgcclose a:hover{font-size:2rem;text-align:center;color:rgba(255,255,255,.80);font-weight:lighter;text-decoration:none;}
+.cgcclose a:hover{font-size:2rem;text-align:center;color:#fff;font-weight:lighter;text-decoration:none;}
+.cgcclose span{display:block;-webkit-transform:rotate(45deg);transform:rotate(45deg);}
+a.current,a.current:visited,a.current:hover{color:#f1f1f1;text-decoration: none;opacity:.5;text-indent:6px;}a.current:before,a.current:visited:before,a.current:hover:before{content:'\2771';margin-right:10px;}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+  p, section p{color:#888;font-size:15px;}
+}
+</style>
+</head>
+
+<body>
+
+
+
+   <div class="navigation">
+     <a href="#menu">&equiv;</a>
+   </div>
+   
+   
+<!-- Full container -->
+<div class="col-12 no container">
+
+
+   <!-- Header -->
+ <div class="col-12 header no">
+ <a href="../index.html"><h1>Graphics</h1></a>
+ </div>
+  <!-- End Header -->
+
+
+<!-- Main container -->
+<div class="col-12 main">
+
+  
+
+<!-- Start Content Boxes -->
+   <div class="row">
+
+
+
+   <div id="section" class="col-12 row">
+     <h3>Welcome Graphics</h3>
+     <p>Right click on image <strong>Save image as...</strong></p>
+     
+     <div class="col-12 imgresponsive tcenter">
+     <h2>Suitable for Header section - page renders 100% width for images</h2>
+     </div>
+     
+     
+     <div class="col-12 imgresponsive tcenter">
+     <img class="blacked" src="https://raw.githubusercontent.com/cssmfc/camgirl/master/pages/camgirl_cloud/wtmp001.png"/></div>
+     
+     <div class="col-12 imgresponsive tcenter">
+     <img class="blacked" src="https://raw.githubusercontent.com/cssmfc/camgirl/master/pages/camgirl_cloud/wtmp002.png"/></div>
+     
+     <div class="col-12 imgresponsive tcenter">
+     <img class="blacked" src="https://raw.githubusercontent.com/cssmfc/camgirl/master/pages/camgirl_cloud/wtmp003.png"/></div>
+     
+     
+     <div class="col-12 imgresponsive tcenter">
+     <img class="blacked" src="https://raw.githubusercontent.com/cssmfc/camgirl/master/pages/camgirl_cloud/wtmp004.png"/></div>
+     
+      <div class="col-12 imgresponsive tcenter">
+     <img class="blacked" src="https://raw.githubusercontent.com/cssmfc/camgirl/master/pages/camgirl_cloud/wtmp005.png"/></div>
+     
+      <div class="col-12 imgresponsive tcenter">
+     <img class="blacked" src="https://raw.githubusercontent.com/cssmfc/camgirl/master/pages/camgirl_cloud/wtmp006.png"/></div>
+     
+
+           <div class="col-12 imgresponsive tcenter">
+     <img class="blacked" src="https://raw.githubusercontent.com/cssmfc/camgirl/master/pages/camgirl_cloud/wtmp007.png"/></div>
+           <div class="col-12 imgresponsive tcenter">
+     <img class="blacked" src="https://raw.githubusercontent.com/cssmfc/camgirl/master/pages/camgirl_cloud/wtmp008.png"/></div>
+           <div class="col-12 imgresponsive tcenter">
+     <img class="blacked" src="https://raw.githubusercontent.com/cssmfc/camgirl/master/pages/camgirl_cloud/wtmp009.png"/></div>
+           <div class="col-12 imgresponsive tcenter">
+     <img class="blacked" src="https://raw.githubusercontent.com/cssmfc/camgirl/master/pages/camgirl_cloud/wtmp010.png"/></div>
+           <div class="col-12 imgresponsive tcenter">
+     <img class="blacked" src="https://raw.githubusercontent.com/cssmfc/camgirl/master/pages/camgirl_cloud/wtmp011.png"/></div>
+     
+     
+     
+
+     
+     
+     
+   </div>
+   
+   
+
+
+
+
+</div>
+<!-- End Content Boxes -->
+
+
+
+
+
+
+
+</div><!-- End Main container -->
+
+</div><!-- End Full container -->
+
+
+
+
+
+<!-- Pagination -->
+<div class="col-12 pagination no">
+  <div class="row"><!-- Row -->
+       <div class="col-1"><p>Pages:</p></div>
+       <div class="col-11">
+       <p>
+       <a href="../index.html">H</a>
+       <a href="1.html">1</a>
+       <a href="2.html">2</a>
+       <a href="3.html">3</a>
+       <a href="4.html">4</a>
+       <a href="5.html">5</a>
+       <a href="6.html">6</a>
+       <a href="7.html" class="active">7</a>
+       </p>
+       </div>
+  </div><!-- End Row -->
+</div><!-- End Pagination -->
+
+
+
+
+
+<!-- Footer -->
+<div class="col-12 footer row">
+
+ <div class="col-7"> <h3>Resources</h3>
+  <p>All available resources in this git are made available for free and private use</p>
+  </div>
+  
+  <div class="col-3">
+    <h3>Useful Links</h3>
+    <div><a href="https://camgirl.cloud/templates/" title="Templates for webcam performers" target="_blank">Camgirl Live Editor</a></div>
+    <div><a href="https://camgirl.cloud/support/forum/download/obs-overlays/" title="OBS overlays" target="_blank">OBS overlays for camgirls</a></div>
+    <div><a href="https://camgirl.cloud/support/forum/download/psd-editable-designs-and-graphic-resources/" title="PSD files" target="_blank">PSD files</a></div>
+  </div>
+  
+  <div class="col-2">
+    <h3>Social Network</h3>
+    <div><a href="https://twitter.com/CSSMFC" title="Twitter" target="_blank">Follow on Twitter</a></div>
+    <div><a href="https://www.facebook.com/groups/camgirl.cloud/" title="Facebook" target="_blank">Facebook Group</a></div>
+    <div><a href="https://www.reddit.com/r/CamgirlLiveEditor/" title="Reddit" target="_blank">Reddit community</a></div>
+  </div>
+  
+</div>
+<!-- End Footer -->
+
+
+
+
+
+<div class="nav">
+  <div id="menu">
+  <div class="cgcclose"><a href="#section"><span>+</span></a></div>
+     <h2>Navigation</h2>
+     <div class="amenu">
+     <a href="../index.html">Main Page</a>
+     <a href="1.html">Gift Cards</a>
+     <a href="2.html">Headers Set 1</a>
+     <a href="3.html">Headers Set 2</a>
+     <a href="4.html">Headers Set 3</a>
+     <a href="5.html">Headers Set 4</a>
+     <a href="6.html">Animated</a>
+     <a href="7.html" class="current">Welcome</a>
+     </div>
+  </div>
+</div>
+
+</body>
+</html>
